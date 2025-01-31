@@ -43,9 +43,7 @@ python main.py
   }
   ```
 
-## Deployment
-Recommended platforms: Render, Vercel, or Heroku
+
 
 ## Backlink
 [*Hire Python Developers at HNG*](https://hng.tech/hire/python-developers)
-"""
