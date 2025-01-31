@@ -16,7 +16,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
     allow_credentials=True,
-    allow_methods=["GET"],  # Only allow GET since that's all we need
+    allow_methods=["GET"],  # Only allow GET requests
     allow_headers=["*"],
 )
 
@@ -31,7 +31,7 @@ class InfoResponse(BaseModel):
     github_url: str
 
 
-@app.get("/", response_model=InfoResponse)
+@app.get("/get-info", response_model=InfoResponse)
 async def get_info() -> Dict[str, str]:
     """
     Handles GET requests to the root endpoint to retrieve 
@@ -59,7 +59,7 @@ async def get_info() -> Dict[str, str]:
         )
 
 # health check endpoint for monitoring
-@app.get("/health")
+@app.get("/")
 async def health_check() -> Dict[str, str]:
     """
     Simple health check endpoint to verify API is running.
