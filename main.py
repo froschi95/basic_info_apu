@@ -45,7 +45,7 @@ async def get_info() -> Dict[str, str]:
     """
     try:
         # Get current UTC time and format it according to ISO 8601
-        current_time = datetime.now(pytz.UTC).astimezone(pytz.timezone('Africa/Lagos')).isoformat()
+        current_time = datetime.now(pytz.UTC).astimezone(pytz.timezone('Africa/Lagos')).strftime('%Y-%m-%dT%H:%M:%S%z')
         
         return {
             "email": "franksuccess95@gmail.com",  
