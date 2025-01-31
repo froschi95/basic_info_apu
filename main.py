@@ -49,7 +49,7 @@ async def get_info() -> Dict[str, str]:
         
         return {
             "email": "franksuccess95@gmail.com",  
-            "current_datetime": datetime.now(timezone.utc).isoformat(),
+            "current_datetime": current_time, # datetime.now(timezone.utc).isoformat()
             "github_url": "https://github.com/froschi95/basic_info_apu"
         }
     except Exception as e:
